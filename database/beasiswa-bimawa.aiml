@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>Saya mau daftar online beasiswa muncul peringatan anda perlu izin apa solusinya?</pattern>
+        <template>
+            Silahkan klik disini untuk logout dari email non UAD dan klik disini untuk login email
+            UAD, lalu akses kembali tautan pendaftaran beasiswa.
+        </template>
+    </category>
+
+    <category>
+        <pattern>Lupa password email UAD</pattern>
+        <template>
+            Silahkan klik disini
+        </template>
+    </category>
+
+    <category>
+        <pattern>beasiswa *</pattern>
+        <template>
+            <think>
+                <set name="jenis"><star/></set>
+            </think>
+
+            <condition name="jenis" value="kp"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="hafidz"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="sso"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="uad award pucang"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="bpm kp pucang"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="cendekia baznas"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="bidikmisi kemristekdikti"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="beasiswa kemenag"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="tahfidz al-quran"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="bidikmisi"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="ppa"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="unggulan kemendikbud"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+            <condition name="jenis" value="juara"> Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan mendaftar.</condition>
+
+        </template>
+    </category>
+
+    <category>
+        <pattern>Saya penerima Beasiswa Program Misi (KP/Hafidz/SSO) / UAD Award Pucang / BPM-KP
+            Pucang / OSC / Cendekia BAZNAS / Bidikmisi Kemristekdikti, Beasiswa Kemenag (Beasiswa
+            Tahfidz Al-Qur’an, Bidikmisi, dan PPA) / Beasiswa Unggulan Kemdikbud / Beasiswa Juara
+            apakah boleh mendaftar beasiswa lainnya?</pattern>
+        <template>
+            Bagi mahasiswa penerima beasiswa full time / tersebut di atas tidak diperkenankan
+            mendaftar.
+        </template>
+    </category>
+
+    <category>
+        <pattern>Saya belum memiliki rekening Bank BTN, apakah boleh mendaftar beasiswa?</pattern>
+        <template>
+            Boleh, silahkan mendaftar, pada bagian rekening kosongkan saja dan DILARANG mengisi
+            nomor rekening Bank selain Bank Tabungan Negara (BTN).
+            Pada seleksi beasiswa usulan masyarakat, pengusul beasiswa diwajibkan sudah memiliki
+            rekening BTN.
+        </template>
+    </category>
+
+    <category>
+        <pattern>Saya tidak memiliki piagam/sertifikat bukti prestasi nasional maupun internasional?</pattern>
+        <template>
+            Isian tersebut tidak wajib, namun menjadi salah satu pertimbangan utama penilaian
+            seleksi beasiswa.
+        </template>
+    </category>
+
+    <category>
+        <pattern>Terkait tandatangan Wakil Rektor III dalam surat permohonan dan pernyataan
+            beasiswa, apakah mahasiswa memproses langsung ke Kantor Rektorat atau bagaimana?</pattern>
+        <template>
+            Berkas surat permohonan dan surat pernyataan dikumpulkan ke Bimawa tanpa tanda tangan WR
+            III beserta berkas persyaratan lengkap (bagi mahasiswa yang dinyatakan lolos seleksi
+            administrasi pendaftaran online).
+        </template>
+    </category>
+
+</aiml>

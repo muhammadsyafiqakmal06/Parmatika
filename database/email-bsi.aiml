@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>Mahasiswa baru belum dapat email uad</pattern>
+        <template>
+            Silahkan untuk menghubungi bagian penerimaan mahasiswa baru untuk verifikasi pada laman
+            pmb-online.uad.ac.id agar muncul tombol bukti registrasi. Atau bisa buka link berikut
+            https://www.instagram.com/
+        </template>
+    </category>
+
+    <!-- Keuntungan Memiliki Email Uad -->
+    <category>
+        <pattern>keuntungan email uad</pattern>
+        <template>
+            Email UAD untuk tampilan sama dengan email Google karena Email UAD menggunakan Google
+            Workspace for Education Plus.
+        </template>
+    </category>
+
+    <category>
+        <pattern>Apa kegunaan email uad</pattern>
+        <template>
+            Untuk publikasi jurnal, Google Scholar, Verifikasi Portal UAD, Pendafataran E-Learning,
+            Digilib dll
+        </template>
+    </category>
+
+    <category>
+        <pattern>Apa saja yang tidak boleh disimpan di email uad</pattern>
+        <template>
+            1. Video atau Musik yang bercopyright
+            2. Aplikasi yang ilegal
+        </template>
+    </category>
+
+    <category>
+        <pattern>Bagaimana jika melanggar aturan</pattern>
+        <template>
+            Akun akan di Suspend langsung dari Google
+        </template>
+    </category>
+
+    <category>
+        <pattern>Apakah akun yang di suspend bisa kembali</pattern>
+        <template>
+            Akun yang sudah disuspend tidak bisa lagi kembali, kecuali mengajukan permohonan ke
+            google dan disetujuai oleh pihak Google
+        </template>
+    </category>
+
+    <category>
+        <pattern>Apakah setelah lulus email uad masih bisa dipakai</pattern>
+        <template>
+            1. Bisa Sekali, Selama tidak menyalahi aturan yang ada dan tidak untuk hal yang ilegal
+            2. Email akan aktif walaupun sudah Alumni, tetapi tidak dapat mendapatkan Google Apps
+            seperti Drive dan Google Photo.
+        </template>
+    </category>
+
+</aiml>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <!-- jumlah sks tidak sesuai dengan ip semester -->
+    <category>
+        <pattern>Jumlah sks tidak sesuai dengan IP semester</pattern>
+        <template>
+            Silahkan masuk ke menu Transkrip Nilai, kemudian klik tombol Rekap.
+        </template>
+    </category>
+
+    <category>
+        <pattern>semester * krs</pattern>
+        <template>
+            <think>
+                <set name="angka"><star/></set>
+            </think>
+
+            <condition name="angka" value="satu">Tidak, untuk semester 1 KRS masih paket.</condition>
+            <condition name="angka" value="dua">Ya. Mahasiswa semester 2 meskipun masih mendapat paket semester 2, namun tetap harus melakukan KRS mandiri.</condition>
+
+        </template>
+    </category>
+
+    <!-- <category>
+        <pattern>Sudah ambil skripsi semester lalu tetapi belum selesai, apakah perlu krs lagi</pattern>
+        <template>
+            Ya, mahasiswa yang belum menyelesaikan skripsi diwajibkan mengambil kembali matakuliah
+            Skripsi pada semester selanjutnya
+        </template>
+    </category> -->
+
+    <!-- Bagaimana jika saya terlambat krs -->
+    <category>
+        <pattern>lambat krs</pattern>
+        <template>
+            Dipastikan lagi, jika sudah melakukan pembayaran pada masa pembayaran maka KRS dapat
+            dilakukan oleh Prodi
+        </template>
+    </category>
+
+    <!-- <category>
+        <pattern>Bagaimana cara aktivasi status non-aktif</pattern>
+        <template>
+            Bisa menghubungi BAA dengan menunjukkan bukti pembayaran.
+        </template>
+    </category> -->
+
+    <!-- <category>
+        <pattern>Saya sudah selesai pendadaran namun belum yudisium, apakah saya harus mengambil
+            kembali matakuliah skripsi di semester ini</pattern>
+        <template>
+            Mahasiswa yang sudah menyelesaikan pendadaran namun belum Yudisium diberikan batasan
+            waktu 1 bulan setelah periode semester berakhir
+        </template>
+    </category> -->
+
+    <!-- <category>
+        <pattern>Apakah boleh di krskan oleh orang lain</pattern>
+        <template>
+            Tidak disarankan, UAD tidak bertanggung jawab dengan data yang ada di portal jika di
+            KRSkan oleh orang lain
+        </template>
+    </category> -->
+
+    <!-- <category>
+        <pattern>Bagaimana cara memperbaiki identitas yang salah di portal</pattern>
+        <template>
+            menghubungi BAA untuk merubah data sesuai dengan ijazah dan akte kelahiran, untuk lebih
+            detail dapat di lihat di link https://baa.uad.ac.id/perbaikan-data-mahasiswa
+        </template>
+    </category> -->
+
+</aiml>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>password *</pattern>
+        <template>
+            <think>
+                <set name="akun"><star/></set>
+            </think>
+
+            <condition name="akun" value="elearning">Silahkan bisa di reset mandiri pada link berikut E-learning.uad.ac.id dengan memasukkan alamat webmail anda.</condition>
+            <condition name="akun" value="portal">Pastikan alamat email anda aktif. Reset password portal versi 2 dapat dilakukan secara mandiri dengan mengakses Halaman Lupa Password. Isikan NIM anda kemudian klik Kirim Ulang Kata Sandi. Periksa email anda dan ikuti petunjuk pengubahan kata sandi atau password.</condition>
+
+        </template>
+    </category>
+
+</aiml>

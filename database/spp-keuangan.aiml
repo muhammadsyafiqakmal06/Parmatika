@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <!-- tempat pembayaran spp -->
+    <category>
+        <pattern>bayar spp</pattern>
+        <template> Anda dapat melakukan pembayaran di: 1. Bank-bank di Kampus 1, 2, 3, 4 dan 5
+            2. Virtual Account yang di dapatkan pada portal.uad.ac.id 3. Bank BRI di seluruh
+            Indonesia via teller 4. Bank Bukopin Syari’ah di seluruh Indonesia via teller
+            5. Bank BPD DIY Syari’ah via teller dan ATM 6. Bank Syariah Indonesia di seluruh
+            Indonesia via teller </template>
+    </category>
+
+    <!-- Jika ingin bayar spp di bank luar kampus -->
+    <category>
+        <pattern>pembayaran spp bank luar kampus</pattern>
+        <template>
+            Silahkan langsung ke teller, sampaikan bahwa Anda akan melakukan pembayaran perkuliahan
+            di UAD. Teller akan menanyakan NIM dan jenis pembayaran yang ingin Anda lakukan.
+            NB: Pembayaran melalui teller tidak memerlukan Nomor Rekening.
+        </template>
+    </category>
+
+    <!-- Apakah saya bisa krsan jika telat bayar -->
+    <category>
+        <pattern>telat bayar</pattern>
+        <template>
+            Anda dapat melakukan KRS mandiri hanya pada periode KRS dan telah membayar SPP. Jika
+            Anda sudah membayar namun melewati batas KRS, silahkan meminta rekomendasi dari Kaprodi
+            untuk dapat di KRS-kan oleh TU.
+        </template>
+    </category>
+
+    <!-- Bagaimana jika jumlah yang dibayarkan tidak sesuai dengan yang tampil di portal? -->
+    <category>
+        <pattern>jumlah dibayarkan tidak sesuai dengan tampil portal</pattern>
+        <template>
+            Silahkan datang ke Bagian Keuangan di Kampus 1 UAD dengan membawa bukti pembayaran.
+        </template>
+    </category>
+
+    <!-- Bagaiama jika saya sudah melakukan pembayaran tapi belum bisa krsan? -->
+    <category>
+        <pattern>pembayaran belum krsan</pattern>
+        <template>
+            Menghubungi bagian keuangan dikampus 1 dengan membawa bukti pembayaran
+        </template>
+    </category>
+
+</aiml>

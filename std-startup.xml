@@ -1,0 +1,8 @@
+<aiml version="2.0">
+    <category>
+        <pattern>LOAD AIML</pattern>
+        <template>
+            <learn>database/*.aiml</learn>
+        </template>
+    </category>
+</aiml>

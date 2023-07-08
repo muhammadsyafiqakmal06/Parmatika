@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>selamat *</pattern>
+        <template>
+            <think>
+                <set name="salam"><star/></set>
+            </think>
+
+            <condition name="salam" value="pagi">Halo kak, Selamat Pagi ada yang bisa saya bantu?</condition>
+            <condition name="salam" value="siang">Halo kak, Selamat Siang ada yang bisa saya bantu?</condition>
+            <condition name="salam" value="sore">Halo kak, Selamat sore ada yang bisa saya bantu?</condition>
+            <condition name="salam" value="malam">Halo kak, Selamat malam ada yang bisa saya bantu?</condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Assalamualaikum</pattern>
+        <template>
+            Wa'alaikumussalam Warahmatullahi Wabarakatuh, Ada yang bisa saya bantu?
+        </template>
+    </category>
+
+    <category>
+        <pattern>Terima kasih</pattern>
+        <template>
+           Sama-sama kak, senang bisa membantu!
+        </template>
+    </category>
+
+    <category>
+        <pattern>Makasih</pattern>
+        <template>
+           Sama-sama kak, senang bisa membantu!
+        </template>
+    </category>
+
+    <category>
+        <pattern>Halo bot</pattern>
+        <template>
+           Halo kak, dengan Bot X disini ada bisa saya bantu?
+        </template>
+    </category>
+
+    <category>
+        <pattern>Halo *</pattern>
+        <template>
+            <random>
+                <li>Hai kak ada yang bisa kami bantu ?</li>
+                <li>Halo!, dengan BOT X ada yang bisa saya bantu ?</li>
+                <li>Halo kak, saya BOT X, ada yang bisa bantu ?</li>
+            </random>
+        </template>
+    </category>
+
+    
+
+
+</aiml>
