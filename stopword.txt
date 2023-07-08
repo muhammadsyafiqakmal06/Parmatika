@@ -118,7 +118,6 @@ bila
 bilakah
 bisa
 bisakah
-boleh
 bolehkah
 bolehlah
 buat
@@ -750,7 +749,6 @@ yakin
 yakni
 yang
 iya
-ya
 kak
 min
 bot
@@ -759,5 +757,4 @@ wimana
 lupa
 laku
 mengah
-spp
 daftar

@@ -1,163 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{url_for('static', filename='img/bot.png')}}" type="image">
-    <title>Chatbot</title>
-    <style>
-        /* Reset default margin and padding */
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        ul,
-        li {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Set a trendy background color */
-        body {
-            background-color: #f2f2f2;
-        }
-
-        /* Set the chat container styles */
-        #chat-container {
-            max-width: 450px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-
-        a {
-            color: black;
-            text-decoration: none;
-        }
-
-        /* Style the chat messages */
-        .chat-message {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        /* Style the user message */
-        .user-message {
-            justify-content: flex-end;
-        }
-
-        /* Style the bot message */
-        .bot-message {
-            justify-content: flex-start;
-        }
-
-        /* Style the message bubble */
-        .chat-message p {
-            display: inline-block;
-            padding: 10px;
-            border-radius: 8px;
-        }
-
-        .user-message p {
-            background-color: #dcf8c6;
-            color: #333333;
-        }
-
-        .bot-message p {
-            background-color: #e6e6e6;
-            color: #333333;
-        }
-
-        /* Style the input tag */
-        input[type="text"] {
-            width: 78%;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            background-color: #f2f2f2;
-            color: #333333;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        /* Style the submit button */
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        /* Style the submit button on hover */
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        /* Style the user avatar */
-        .user-avatar {
-            margin-right: 10px;
-            padding: 5px;
-        }
-
-        /* Style the bot avatar */
-        .bot-avatar {
-            margin-left: 10px;
-            padding: 5px;
-        }
-
-        /* Style the avatar image */
-        .avatar-image {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-    </style>
-
+    <link rel="stylesheet" href="css.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
 </head>
-
 <body>
-    <div id="chat-container" style="height: auto;">
-        <a href="/chat/mantap">
-            <h1>Bot X</h1>
-        </a>
-        <div id="chat-log">
-            {% for message in chat_log %}
-            {% if message.sender == "user" %}
-            <div class="chat-message user-message">
-                <p>{{ message.content }}</p>
-                <div class="user-avatar">
-                    <img class="avatar-image" src="{{url_for('static', filename='img/user.png')}}" alt="User Avatar">
+    <section style="background-color: #eee;">
+        <div class="container py-5">
+      
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+      
+              <div class="card" id="chat-log" style="border-radius: 15px;">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center p-3 bg-info text-white border-bottom-0"
+                  style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                  <i class="fas fa-angle-left"></i>
+                  <p class="mb-0 fw-bold">Live chat</p>
+                  <i class="fas fa-times"></i>
                 </div>
-            </div>
-            {% else %}
-            <div class="chat-message bot-message">
-                <div class="bot-avatar">
-                    <img class="avatar-image" src="{{url_for('static', filename='img/bot.png')}}" alt="Bot Avatar">
+                <div class="card-body">
+                  {% for message in chat_log %}
+                  {% if message.sender == "user" %}
+      <!-- pertanyaan -->
+                    <div class="d-flex flex-row justify-content-end mb-4">
+                      <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
+                        <p class="small mb-0">{{ message.content }}</p>
+                      </div>
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
+                        alt="avatar 1" style="width: 45px; height: 100%;">
+                    </div>
+
+                
+                  
+      <!-- jawaban -->
+                    {% else %}
+                    <div class="d-flex flex-row justify-content-start mb-4">
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                        alt="avatar 1" style="width: 45px; height: 100%;">
+                      <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
+                        <p class="small mb-0">{{ message.content }}</p>
+                      </div>
+                    </div>
+      <!-- end -->
+                  {% endif %}
+                  {% endfor %}
+                  <form method="POST" action="/">
+                    <input type="text" id="user_input" name="user_input" placeholder="Enter your message" class="form-control" autofocus>
+                    <input class="btn btn-success" type="submit" value="Send" hidden>
+                   </form>
+      
                 </div>
-                <p>{{ message.content }}</p>
+              </div>
+      
             </div>
-            {% endif %}
-            {% endfor %}
+          </div>
+      
         </div>
-        <form method="POST" action="/">
-            <input type="text" id="user_input" name="user_input" placeholder="Enter your message" autofocus style="">
-            <input type="submit" value="Send">
-        </form>
-
-    </div>
-
+      </section>
 </body>
-
-</html>l
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

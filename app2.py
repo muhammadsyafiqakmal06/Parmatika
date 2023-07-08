@@ -44,15 +44,14 @@ def hapus():
 
 @app.route("/chat")
 def home():
+    chat_log.append({"sender": "user", "content": "Halo Bot!"})
     chat_log.append(
         {"sender": "bot", "content": "Halo selamat datang, Ada yang bisa saya bantu kak?"})
     return render_template("index.html", chat_log=chat_log)
 
 
 DEFAULT_RESPONSES = [
-    "Mohon Maaf, Saya tidak mengerti apa yang anda tanyakan",
-    "Mohon Maaf, Saya tidak dapat mengerti, Silahkan ketik kembali pertanyaan anda",
-    "Pertanyaan yang anda inputkan tidak ada pada database kami, mohon masukkan pertanyaan lain",
+    "Pertanyaan yang anda inputkan tidak ada pada database kami, Apakah anda ingin dihubungkan ke CS kami?"
 ]
 
 # membuat Stemming
